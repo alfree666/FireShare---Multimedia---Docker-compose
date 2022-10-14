@@ -8,9 +8,9 @@ services:
     ports:
       - "8200:80"
     volumes:
-      - ./dev_root/fireshare_data:/data
-      - ./dev_root/fireshare_processed:/processed
-      - ./dev_root/fireshare_videos:/videos
+      - ./fireshare_data:/data
+      - ./fireshare_processed:/processed
+      - ./fireshare_videos:/videos
     environment:
       - ADMIN_USERNAME=admin
       - ADMIN_PASSWORD=admin
