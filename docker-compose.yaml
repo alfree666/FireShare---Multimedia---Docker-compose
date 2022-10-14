@@ -1,0 +1,22 @@
+version: "3.3"
+
+services:
+
+  fireshare:
+    container_name: fireshare
+    image: shaneisrael/fireshare:latest
+    ports:
+      - "8200:80"
+    volumes:
+      - ./dev_root/fireshare_data:/data
+      - ./dev_root/fireshare_processed:/processed
+      - ./dev_root/fireshare_videos:/videos
+    environment:
+      - ADMIN_USERNAME=admin
+      - ADMIN_PASSWORD=admin
+      - SECRET_KEY=reemplazar_esto_con_alguna_cadena_aleatoria
+      - MINUTES_BETWEEN_VIDEO_SCANS=5
+      - PUID=1000
+      - PGID=1000
+
+      
